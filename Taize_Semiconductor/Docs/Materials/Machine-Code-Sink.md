@@ -101,11 +101,11 @@ if (SinkInstruction(MI, SawStore, AllSuccessors)) {
 ### `PerformTrivialForwardCoalescing`
 #### Diagram
 ```sql
-+-------------------+
-|   ParentBlock     |
-|   DefMI: Op Src   |
++--------------------+
+|   ParentBlock      |
+|   DefMI: Op Src    |
 |   MI: COPY Dst, Src|
-+-------------------+
++--------------------+
          |
          | Replace all uses of Dst with Src
          v
@@ -421,36 +421,34 @@ Instead, we postpone all the splits after each iteration of the main loop. That 
    +-------+       
       |     \     
       |      \
-      v       v
-   +-------+  +-------+
-   |  bb.2 |  |  bb.3 |    
-   |       |  | x =   |
-   +-------+  | v1024 |
-              +-------+
+      |       \  <--- SPLIT!
+      |        \
+      |         \
+      v          v
+   +-------+     +-------+
+   |  bb.2 |     |  bb.3 |    
+   |       |---->| x =   |
+   +-------+     | v1024 |
+                 +-------+
 ```
 **Critical Edge**: An edge whose source has multiple successors and whose sink has multiple predecessors.
 
 - After Splitting
 ```sql
-   +-------+
-   |  bb.1 |  (From: Defines v1024)
-   +-------+
-      |
-      v
-   +-----------+
-   | new block |  (Splits edge)
-   | v1024 =   |
-   +-----------+
-      |     \
-      v      v
-   +-------+  +-------+
-   |  bb.2 |  |  bb.3 |  (To: Uses v1024)
-   +-------+  | x =   |
-              | v1024 |
-              +-------+
+   +-------+       +-----------+
+   | bb.1  | ----> | new block |
+   +-------+       | v1024 =   |
+      |            +-----------+
+      |                  |  
+      |                  |
+      v                  v
+   +-------+       +-----------+
+   | bb.2  | ----> |   bb.3    |  
+   +-------+       | x = v1024 |
+                   +-----------+
 
 ```
-It is wrong result. `v1024` is not defined in the path `bb.1 -> bb.2 -> bb.3`.
+This is **WRONG** result. `v1024` is not defined in the path `bb.1 -> bb.2 -> bb.3`.
 
 There is only one path from 'new block' to `bb.3`. So, splitting edges is only valid when `bb.3` dominates all the predecessors besides `bb.1`. That is, 'To block' is dominates all its predecessors besides `From block`.
 
