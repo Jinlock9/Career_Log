@@ -1,0 +1,127 @@
+----------------------------------------------------------------------------------------------------
+KERNEL=mean_dim_bf16
+TEST[1] mean_dim_bf16(1, 1, 5, 2, 6, {0, 0, 1, 0, 1}, false, true) : OFF: 3500, ON: 3434, DIFF: -1.89%
+TEST[2] mean_dim_bf16(1, 1, 1, 8, 256, {0, 0, 0, 0, 1}, false, true) : OFF: 2319, ON: 2298, DIFF: -0.91%
+TEST[3] mean_dim_bf16(1, 1, 1, 53, 288, {0, 0, 0, 0, 1}, false, true) : OFF: 3645, ON: 3622, DIFF: -0.63%
+TEST[4] mean_dim_bf16(1, 1, 1, 53, 4096, {0, 0, 0, 0, 1}, false, true) : OFF: 4917, ON: 4894, DIFF: -0.47%
+TEST[5] mean_dim_bf16(1, 7, 1, 2, 1111, {0, 1, 1, 0, 1}, false, true) : OFF: 4446, ON: 4448, DIFF: 0.04%
+TEST[6] mean_dim_bf16(2, 2, 2, 262, 263, {0, 1, 1, 0, 1}, false, true) : OFF: 207237, ON: 208211, DIFF: 0.47%
+[Total] OFF: 226064, ON: 226907, DIFF: 0.37%
+----------------------------------------------------------------------------------------------------
+KERNEL=nansum_intList_bf16
+TEST[1] nansum_intList_bf16(nansum, true, true, {233, 13, 2, 2, 2}, {1}) : OFF: 16820, ON: 14853, DIFF: -11.69%
+TEST[2] nansum_intList_bf16(nansum, true, true, {233, 13, 2, 2, 2}, {1, 0}) : OFF: 17039, ON: 15121, DIFF: -11.26%
+TEST[3] nansum_intList_bf16(nansum, true, true, {233, 13, 2, 2, 2}, {2, 1}) : OFF: 10854, ON: 9857, DIFF: -9.19%
+TEST[4] nansum_intList_bf16(nansum, true, true, {233, 13, 2, 2, 2}, {2, 1, 0}) : OFF: 11084, ON: 10137, DIFF: -8.54%
+TEST[5] nansum_intList_bf16(nansum, true, true, {233, 8, 3, 1, 1}, {1, 2, 3}) : OFF: 7402, ON: 6892, DIFF: -6.89%
+TEST[6] nansum_intList_bf16(nansum, true, true, {233, 13, 2, 2, 2}, {3, 2, 1}) : OFF: 7768, ON: 7263, DIFF: -6.50%
+TEST[7] nansum_intList_bf16(nansum, true, true, {233, 8, 3, 1, 1}, {0, 1, 2}) : OFF: 7623, ON: 7165, DIFF: -6.01%
+TEST[8] nansum_intList_bf16(nansum, true, true, {233, 13, 2, 2, 2}, {3, 2, 1, 0}) : OFF: 7998, ON: 7543, DIFF: -5.69%
+TEST[9] nansum_intList_bf16(nansum, true, true, {233, 13, 2, 2, 2}, {4, 3, 2, 1}) : OFF: 9506, ON: 9039, DIFF: -4.91%
+TEST[10] nansum_intList_bf16(nansum, true, true, {233, 13, 2, 2, 2}, {4, 1}) : OFF: 159654, ON: 153006, DIFF: -4.16%
+TEST[11] nansum_intList_bf16(nansum, true, true, {233, 13, 2, 2, 2}, {4, 1, 0}) : OFF: 159811, ON: 153216, DIFF: -4.13%
+TEST[12] nansum_intList_bf16(nansum, true, true, {233, 13, 2, 2, 2}, {4, 2, 1}) : OFF: 153684, ON: 148007, DIFF: -3.69%
+TEST[13] nansum_intList_bf16(nansum, true, true, {233, 13, 2, 2, 2}, {4, 2, 1, 0}) : OFF: 153852, ON: 148229, DIFF: -3.65%
+TEST[14] nansum_intList_bf16(nansum, true, true, {233, 8, 3, 1, 1}, {1, 2, 4}) : OFF: 73666, ON: 71049, DIFF: -3.55%
+TEST[15] nansum_intList_bf16(nansum, true, true, {233, 13, 2, 2, 2}, {4, 0}) : OFF: 147230, ON: 142461, DIFF: -3.24%
+TEST[16] nansum_intList_bf16(nansum, true, true, {233, 13, 2, 2, 2}, {4}) : OFF: 146370, ON: 141675, DIFF: -3.21%
+TEST[17] nansum_intList_bf16(nansum, true, true, {233, 13, 2, 2, 2}, {0}) : OFF: 3759, ON: 3673, DIFF: -2.29%
+TEST[18] nansum_intList_bf16(nansum, true, true, {233, 13, 2, 2, 2}, {4, 2, 0}) : OFF: 218810, ON: 214514, DIFF: -1.96%
+TEST[19] nansum_intList_bf16(nansum, true, true, {233, 13, 2, 2, 2}, {4, 2}) : OFF: 218271, ON: 214023, DIFF: -1.95%
+TEST[20] nansum_intList_bf16(nansum, true, true, {233, 8, 3, 1, 1}, {0, 1, 3}) : OFF: 80687, ON: 79480, DIFF: -1.50%
+TEST[21] nansum_intList_bf16(nansum, true, true, {233, 13, 2, 2, 2}, {4, 3, 1}) : OFF: 82819, ON: 81921, DIFF: -1.08%
+TEST[22] nansum_intList_bf16(nansum, true, true, {233, 13, 2, 2, 2}, {3, 1}) : OFF: 82776, ON: 81880, DIFF: -1.08%
+TEST[23] nansum_intList_bf16(nansum, true, true, {233, 13, 2, 2, 2}, {4, 3, 1, 0}) : OFF: 82976, ON: 82131, DIFF: -1.02%
+TEST[24] nansum_intList_bf16(nansum, true, true, {233, 13, 2, 2, 2}, {3, 1, 0}) : OFF: 82933, ON: 82090, DIFF: -1.02%
+TEST[25] nansum_intList_bf16(nansum, true, true, {233, 13, 2, 2, 2}, {4, 3, 0}) : OFF: 76395, ON: 76431, DIFF: 0.05%
+TEST[26] nansum_intList_bf16(nansum, true, true, {233, 13, 2, 2, 2}, {3, 0}) : OFF: 76352, ON: 76390, DIFF: 0.05%
+TEST[27] nansum_intList_bf16(nansum, true, true, {233, 13, 2, 2, 2}, {4, 3}) : OFF: 75856, ON: 75933, DIFF: 0.10%
+TEST[28] nansum_intList_bf16(nansum, true, true, {233, 13, 2, 2, 2}, {3}) : OFF: 75813, ON: 75892, DIFF: 0.10%
+TEST[29] nansum_intList_bf16(nansum, true, true, {123, 123, 1, 1, 12}, {4}) : OFF: 270870, ON: 271702, DIFF: 0.31%
+TEST[30] nansum_intList_bf16(nansum, true, true, {233, 13, 2, 2, 2}, {4, 3, 2, 1, 0}) : OFF: 7061, ON: 7093, DIFF: 0.45%
+TEST[31] nansum_intList_bf16(nansum, true, true, {233, 13, 2, 2, 2}, {4, 3, 2, 0}) : OFF: 40151, ON: 40353, DIFF: 0.50%
+TEST[32] nansum_intList_bf16(nansum, true, true, {233, 13, 2, 2, 2}, {3, 2, 0}) : OFF: 40109, ON: 40312, DIFF: 0.51%
+TEST[33] nansum_intList_bf16(nansum, true, true, {233, 13, 2, 2, 2}, {2, 0}) : OFF: 75967, ON: 76355, DIFF: 0.51%
+TEST[34] nansum_intList_bf16(nansum, true, true, {233, 13, 2, 2, 2}, {4, 3, 2}) : OFF: 39826, ON: 40054, DIFF: 0.57%
+TEST[35] nansum_intList_bf16(nansum, true, true, {233, 13, 2, 2, 2}, {3, 2}) : OFF: 39784, ON: 40013, DIFF: 0.58%
+TEST[36] nansum_intList_bf16(nansum, true, true, {233, 13, 2, 2, 2}, {2}) : OFF: 75428, ON: 75864, DIFF: 0.58%
+[Total] OFF: 2837004, ON: 2781617, DIFF: -1.95%
+----------------------------------------------------------------------------------------------------
+KERNEL=unfold
+TEST[1] unfold(1, 2, 16, 512, 2, 2, 4, 4, true) : OFF: 105231, ON: 93866, DIFF: -10.80%
+TEST[2] unfold(1, 2, 16, 10, 2, 2, 3, 4, true) : OFF: 16889, ON: 16915, DIFF: 0.15%
+TEST[3] unfold(1, 2, 16, 512, 2, 2, 3, 4, true) : OFF: 73743, ON: 74353, DIFF: 0.83%
+[Total] OFF: 195863, ON: 185134, DIFF: -5.48%
+----------------------------------------------------------------------------------------------------
+KERNEL=std_correction
+TEST[1] std_correction(1, 5, 2, 22, 199, {0, 1, 0, 1, 0}, 1, true) : OFF: 245941, ON: 238872, DIFF: -2.87%
+TEST[2] std_correction(1, 1, 5, 2, 6, {0, 0, 1, 0, 1}, 1, true) : OFF: 4485, ON: 4422, DIFF: -1.40%
+TEST[3] std_correction(1, 1, 1, 8, 256, {0, 0, 0, 0, 1}, 2, true) : OFF: 4831, ON: 4873, DIFF: 0.87%
+TEST[4] std_correction(1, 7, 1, 2, 1111, {0, 0, 1, 1, 1}, 1, true) : OFF: 6121, ON: 6189, DIFF: 1.11%
+[Total] OFF: 261378, ON: 254356, DIFF: -2.69%
+----------------------------------------------------------------------------------------------------
+KERNEL=index_copy_tensor_bf16
+TEST[1] index_copy_tensor_bf16({2048, 8, 4, 1, 1}, {2048, 4, 4, 1, 1}, 1, {0, 7, 6, 5}, 0) : OFF: 10879, ON: 10896, DIFF: 0.16%
+TEST[2] index_copy_tensor_bf16({2048, 8, 1, 1, 1}, {2048, 4, 1, 1, 1}, 1, {0, 7, 6, 5}, 0) : OFF: 4663, ON: 4680, DIFF: 0.36%
+TEST[3] index_copy_tensor_bf16({1, 1, 1, 29, 1}, {1, 1, 1, 29, 1}, 1, {0}, 0) : OFF: 3761, ON: 3783, DIFF: 0.58%
+TEST[4] index_copy_tensor_bf16({512, 1024, 1, 1, 1}, {512, 1024, 1, 1, 1}, 0, {0}, 0) : OFF: 69253, ON: 71311, DIFF: 2.97%
+[Total] OFF: 88556, ON: 94092, DIFF: 6.25%
+----------------------------------------------------------------------------------------------------
+KERNEL=narrow_bf16
+TEST[1] narrow_bf16(10, 10, 1, 1, 4352, 1, 0, 2, false) : OFF: 7181, ON: 7188, DIFF: 0.10%
+TEST[2] narrow_bf16(1, 10, 10, 1, 4352, 2, 0, 2, false) : OFF: 7176, ON: 7183, DIFF: 0.10%
+TEST[3] narrow_bf16(1, 1, 1, 4, 2048, 4, 0, 1024, false) : OFF: 3105, ON: 3112, DIFF: 0.23%
+TEST[4] narrow_bf16(32, 3, 4, 5, 6, 0, 1, 2, false) : OFF: 2061, ON: 2068, DIFF: 0.34%
+TEST[5] narrow_bf16(10, 1, 1, 1, 4352, 0, 0, 2, false) : OFF: 1855, ON: 1862, DIFF: 0.38%
+TEST[6] narrow_bf16(1, 1, 1, 10, 4352, 3, 0, 2, false) : OFF: 1850, ON: 1857, DIFF: 0.38%
+TEST[7] narrow_bf16(1, 1, 1, 1024, 6, 4, 1, 2, false) : OFF: 360965, ON: 406263, DIFF: 12.55%
+[Total] OFF: 384193, ON: 429533, DIFF: 11.80%
+----------------------------------------------------------------------------------------------------
+KERNEL=isnan_bf16
+TEST[1] isnan_bf16(false, {767, 1, 1, 1, 1}) : OFF: 1975, ON: 2013, DIFF: 1.92%
+TEST[2] isnan_bf16(false, {1024, 1, 1, 1, 1}) : OFF: 1995, ON: 2037, DIFF: 2.11%
+TEST[3] isnan_bf16(false, {1153, 1, 1, 1, 1}) : OFF: 1980, ON: 2033, DIFF: 2.68%
+TEST[4] isnan_bf16(false, {895, 1, 1, 1, 1}) : OFF: 2265, ON: 2328, DIFF: 2.78%
+TEST[5] isnan_bf16(false, {1281, 1, 1, 1, 1}) : OFF: 2249, ON: 2326, DIFF: 3.42%
+TEST[6] isnan_bf16(false, {256, 1, 1, 1, 128}) : OFF: 3279, ON: 3395, DIFF: 3.54%
+TEST[7] isnan_bf16(false, {202, 3, 4, 5, 6}) : OFF: 6062, ON: 6303, DIFF: 3.98%
+TEST[8] isnan_bf16(false, {128, 1, 1, 1, 256}) : OFF: 31213, ON: 32675, DIFF: 4.68%
+TEST[9] isnan_bf16(false, {101, 3, 4, 5, 6}) : OFF: 43073, ON: 45107, DIFF: 4.72%
+TEST[10] isnan_bf16(false, {8191, 2, 3, 4, 17}) : OFF: 152417, ON: 159805, DIFF: 4.85%
+TEST[11] isnan_bf16(false, {8319, 2, 3, 4, 17}) : OFF: 200795, ON: 221045, DIFF: 10.08%
+TEST[12] isnan_bf16(false, {24704, 128, 1, 1, 1}) : OFF: 161445, ON: 179099, DIFF: 10.93%
+[Total] OFF: 608748, ON: 658166, DIFF: 8.12%
+----------------------------------------------------------------------------------------------------
+KERNEL=_foreach_lerp_tensor_bf16
+TEST[1] _foreach_lerp_tensor_bf16(false, {{1, 5, 1, 2, 1}}, {{1, 1, 6, 2, 1}}, {{1, 5, 6, 2, 1}}) : OFF: 31722, ON: 32967, DIFF: 3.92%
+TEST[2] _foreach_lerp_tensor_bf16(false, {{13, 4, 5, 2, 1}, {33, 2, 11, 1, 1}}, {{13, 1, 5, 1, 1}, {33, 1, 11, 2, 1}}, {{13, 1, 1, 1, 1}, {33, 1, 1, 1, 1}}) : OFF: 45796, ON: 47603, DIFF: 3.95%
+TEST[3] _foreach_lerp_tensor_bf16(false, {{16388, 5, 1, 2, 1}}, {{16388, 1, 6, 2, 1}}, {{16388, 5, 6, 2, 1}}) : OFF: 134796, ON: 146362, DIFF: 8.58%
+TEST[4] _foreach_lerp_tensor_bf16(false, {{1, 5, 1, 2, 1}}, {{16388, 1, 6, 2, 1}}, {{16388, 5, 6, 2, 1}}) : OFF: 131134, ON: 142759, DIFF: 8.86%
+TEST[5] _foreach_lerp_tensor_bf16(false, {{16388, 5, 1, 2, 1}}, {{1, 1, 6, 2, 1}}, {{16388, 5, 6, 2, 1}}) : OFF: 130650, ON: 142429, DIFF: 9.02%
+TEST[6] _foreach_lerp_tensor_bf16(false, {{1, 5, 1, 2, 1}}, {{1, 1, 6, 2, 1}}, {{16388, 5, 6, 2, 1}}) : OFF: 125155, ON: 136569, DIFF: 9.12%
+TEST[7] _foreach_lerp_tensor_bf16(false, {{16388, 5, 1, 2, 1}, {33, 2, 11, 1, 1}}, {{16388, 1, 6, 2, 1}, {33, 1, 11, 2, 1}}, {{1, 5, 6, 2, 1}, {33, 1, 1, 1, 1}}) : OFF: 137459, ON: 150113, DIFF: 9.21%
+TEST[8] _foreach_lerp_tensor_bf16(false, {{16388, 5, 1, 2, 1}}, {{16388, 1, 6, 2, 1}}, {{1, 5, 6, 2, 1}}) : OFF: 113979, ON: 125665, DIFF: 10.25%
+TEST[9] _foreach_lerp_tensor_bf16(false, {{1, 5, 1, 2, 1}}, {{16388, 1, 6, 2, 1}}, {{1, 5, 6, 2, 1}}) : OFF: 110593, ON: 122507, DIFF: 10.77%
+TEST[10] _foreach_lerp_tensor_bf16(false, {{16388, 5, 1, 2, 1}}, {{1, 1, 6, 2, 1}}, {{1, 5, 6, 2, 1}}) : OFF: 110443, ON: 122431, DIFF: 10.85%
+[Total] OFF: 1071727, ON: 1169405, DIFF: 9.11%
+----------------------------------------------------------------------------------------------------
+KERNEL=eye_bf16
+TEST[1] eye_bf16(dlc_bf16, 1024, 1) : OFF: 1560, ON: 1566, DIFF: 0.38%
+TEST[2] eye_bf16(dlc_bf16, 895, 1) : OFF: 1557, ON: 1563, DIFF: 0.39%
+TEST[3] eye_bf16(dlc_bf16, 768, 1) : OFF: 1553, ON: 1559, DIFF: 0.39%
+TEST[4] eye_bf16(dlc_bf16, 1153, 1) : OFF: 1560, ON: 1575, DIFF: 0.96%
+TEST[5] eye_bf16(dlc_bf16, 1280, 1) : OFF: 1560, ON: 1575, DIFF: 0.96%
+TEST[6] eye_bf16(dlc_bf16, 12, 3) : OFF: 1771, ON: 1859, DIFF: 4.97%
+TEST[7] eye_bf16(dlc_bf16, 2048, 2048) : OFF: 561496, ON: 667920, DIFF: 18.95%
+[Total] OFF: 571057, ON: 677617, DIFF: 18.66%
+----------------------------------------------------------------------------------------------------
+KERNEL=eye
+TEST[1] eye(dlc_fp32, 768, 1) : OFF: 932, ON: 921, DIFF: -1.18%
+TEST[2] eye(dlc_fp32, 895, 1) : OFF: 933, ON: 922, DIFF: -1.18%
+TEST[3] eye(dlc_fp32, 1024, 1) : OFF: 934, ON: 923, DIFF: -1.18%
+TEST[4] eye(dlc_fp32, 1153, 1) : OFF: 957, ON: 946, DIFF: -1.15%
+TEST[5] eye(dlc_fp32, 1280, 1) : OFF: 957, ON: 946, DIFF: -1.15%
+TEST[6] eye(dlc_fp32, 12, 3) : OFF: 1150, ON: 1225, DIFF: 6.52%
+TEST[7] eye(dlc_fp32, 2048, 2048) : OFF: 346370, ON: 432296, DIFF: 24.81%
+[Total] OFF: 352233, ON: 438179, DIFF: 24.40%
+----------------------------------------------------------------------------------------------------

@@ -13,3 +13,8 @@ Need to figure out why this "should have positive impact optimization (Machine c
     |  10  |         152417         |        159805       |
     |  11  |         200795         |        221045       |
     |  12  |         161445         |        179099       |
+
+## Approaches
+1. Increased Number of Branch Instructions
+2. Test cases can be Biased
+3. 

@@ -5,7 +5,11 @@ Having more branches is inevitable as the price of splitting edges. However, it 
 
 *Nevertheless, reducing the number of branches is expected to improve the performance.*
 
-### Suspicion 1: Placing Basic Blocks based on Branch Probability may cause even larger increased branches [X]
+#### PROBLEM!: Some kernel shows improvement in performance even though branch instructions are increased.
+
+---
+
+## Suspicion 1: Placing Basic Blocks based on Branch Probability may cause even larger increased branches [X]
 From the observation, branch instructions are even more increased after tha **Branch Probability BB Placement**.
 
 ### Analysis:
