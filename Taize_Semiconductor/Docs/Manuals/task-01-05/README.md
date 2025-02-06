@@ -1,6 +1,8 @@
 # Task: Why Machine Code Sinking has Negative Impact on Kernel Cycles
 Need to figure out why this "should have positive impact optimization (Machine code sinking)" have a negative impact on the kernel cycles.
 
+- 2025.01.23 - 01.27, 02.05 - 02.06 [Complete]
+
 #### Example:
 - `isnan_bf16`
 
@@ -17,4 +19,5 @@ Need to figure out why this "should have positive impact optimization (Machine c
 ## Approaches
 1. Increased Number of Branch Instructions
 2. Test cases can be Biased
-3. 
+
+#### See `Conclusion.md`
