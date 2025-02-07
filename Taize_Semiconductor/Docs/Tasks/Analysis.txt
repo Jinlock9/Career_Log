@@ -1,0 +1,500 @@
+********** MI Converging Scheduling VLIW %bb.589 loadmin8_k.exit3819 in_func main at loop depth 2 
+Max Height 43
+Max Depth 43
+SU(0) [TopReadyCycle = 0, BottomReadyCycle = 0]:   %622:sx = nsw S_SUB %31:sx, %9861:sx
+  # preds left       : 0
+  # succs left       : 3
+  # rdefs left       : 0
+  Latency            : 4
+  Depth              : 0
+  Height             : 8
+  Successors:
+    SU(20): Data Latency=4 Reg=%622
+    SU(19): Data Latency=4 Reg=%622
+    SU(18): Data Latency=4 Reg=%622
+  Pressure Diff      : SXBF -1    SY -1    SY_with_VY -1
+  Single Issue       : false;
+SU(1) [TopReadyCycle = 0, BottomReadyCycle = 0]:   M_TpE %9867:vx, 0 :: (store (<1024 x s32>) into custom "TransposePopNWS0", align 4, addrspace 5)
+  # preds left       : 0
+  # succs left       : 16
+  # rdefs left       : 0
+  Latency            : 28
+  Depth              : 0
+  Height             : 43
+  Successors:
+    SU(17): Ord  Latency=28 Memory
+    SU(16): Ord  Latency=28 Memory
+    SU(15): Ord  Latency=28 Memory
+    SU(14): Ord  Latency=28 Memory
+    SU(13): Ord  Latency=28 Memory
+    SU(12): Ord  Latency=28 Memory
+    SU(11): Ord  Latency=28 Memory
+    SU(10): Ord  Latency=28 Memory
+    SU(9): Ord  Latency=28 Memory
+    SU(8): Ord  Latency=28 Memory
+    SU(7): Ord  Latency=28 Memory
+    SU(6): Ord  Latency=28 Memory
+    SU(5): Ord  Latency=28 Memory
+    SU(4): Ord  Latency=28 Memory
+    SU(3): Ord  Latency=28 Memory
+    SU(2): Ord  Latency=28 Memory
+  Pressure Diff      : VX 1    VY 1    SY_with_VY 1
+  Single Issue       : false;
+SU(2) [TopReadyCycle = 0, BottomReadyCycle = 0]:   %648:vx = M_ReadTransRes 0 :: (load (<1024 x s32>) from custom "TransposePopNWS0", align 4, addrspace 5)
+  # preds left       : 1
+  # succs left       : 2
+  # rdefs left       : 0
+  Latency            : 3
+  Depth              : 28
+  Height             : 15
+  Predecessors:
+    SU(1): Ord  Latency=28 Memory
+  Successors:
+    ExitSU: Ord  Latency=0 Artificial
+    SU(3): Ord  Latency=1 Memory
+  Pressure Diff      : VX -1    VY -1    SY_with_VY -1
+  Single Issue       : false;
+SU(3) [TopReadyCycle = 0, BottomReadyCycle = 0]:   %649:vx = M_ReadTransRes 0 :: (load (<1024 x s32>) from custom "TransposePopNWS0", align 4, addrspace 5)
+  # preds left       : 2
+  # succs left       : 2
+  # rdefs left       : 0
+  Latency            : 3
+  Depth              : 29
+  Height             : 14
+  Predecessors:
+    SU(1): Ord  Latency=28 Memory
+    SU(2): Ord  Latency=1 Memory
+  Successors:
+    ExitSU: Ord  Latency=0 Artificial
+    SU(4): Ord  Latency=1 Memory
+  Pressure Diff      : VX -1    VY -1    SY_with_VY -1
+  Single Issue       : false;
+SU(4) [TopReadyCycle = 0, BottomReadyCycle = 0]:   %650:vx = M_ReadTransRes 0 :: (load (<1024 x s32>) from custom "TransposePopNWS0", align 4, addrspace 5)
+  # preds left       : 2
+  # succs left       : 2
+  # rdefs left       : 0
+  Latency            : 3
+  Depth              : 30
+  Height             : 13
+  Predecessors:
+    SU(1): Ord  Latency=28 Memory
+    SU(3): Ord  Latency=1 Memory
+  Successors:
+    ExitSU: Ord  Latency=0 Artificial
+    SU(5): Ord  Latency=1 Memory
+  Pressure Diff      : VX -1    VY -1    SY_with_VY -1
+  Single Issue       : false;
+SU(5) [TopReadyCycle = 0, BottomReadyCycle = 0]:   %651:vx = M_ReadTransRes 0 :: (load (<1024 x s32>) from custom "TransposePopNWS0", align 4, addrspace 5)
+  # preds left       : 2
+  # succs left       : 2
+  # rdefs left       : 0
+  Latency            : 3
+  Depth              : 31
+  Height             : 12
+  Predecessors:
+    SU(1): Ord  Latency=28 Memory
+    SU(4): Ord  Latency=1 Memory
+  Successors:
+    ExitSU: Ord  Latency=0 Artificial
+    SU(6): Ord  Latency=1 Memory
+  Pressure Diff      : VX -1    VY -1    SY_with_VY -1
+  Single Issue       : false;
+SU(6) [TopReadyCycle = 0, BottomReadyCycle = 0]:   %652:vx = M_ReadTransRes 0 :: (load (<1024 x s32>) from custom "TransposePopNWS0", align 4, addrspace 5)
+  # preds left       : 2
+  # succs left       : 2
+  # rdefs left       : 0
+  Latency            : 3
+  Depth              : 32
+  Height             : 11
+  Predecessors:
+    SU(1): Ord  Latency=28 Memory
+    SU(5): Ord  Latency=1 Memory
+  Successors:
+    ExitSU: Ord  Latency=0 Artificial
+    SU(7): Ord  Latency=1 Memory
+  Pressure Diff      : VX -1    VY -1    SY_with_VY -1
+  Single Issue       : false;
+SU(7) [TopReadyCycle = 0, BottomReadyCycle = 0]:   %653:vx = M_ReadTransRes 0 :: (load (<1024 x s32>) from custom "TransposePopNWS0", align 4, addrspace 5)
+  # preds left       : 2
+  # succs left       : 2
+  # rdefs left       : 0
+  Latency            : 3
+  Depth              : 33
+  Height             : 10
+  Predecessors:
+    SU(1): Ord  Latency=28 Memory
+    SU(6): Ord  Latency=1 Memory
+  Successors:
+    ExitSU: Ord  Latency=0 Artificial
+    SU(8): Ord  Latency=1 Memory
+  Pressure Diff      : VX -1    VY -1    SY_with_VY -1
+  Single Issue       : false;
+SU(8) [TopReadyCycle = 0, BottomReadyCycle = 0]:   %654:vx = M_ReadTransRes 0 :: (load (<1024 x s32>) from custom "TransposePopNWS0", align 4, addrspace 5)
+  # preds left       : 2
+  # succs left       : 2
+  # rdefs left       : 0
+  Latency            : 3
+  Depth              : 34
+  Height             : 9
+  Predecessors:
+    SU(1): Ord  Latency=28 Memory
+    SU(7): Ord  Latency=1 Memory
+  Successors:
+    ExitSU: Ord  Latency=0 Artificial
+    SU(9): Ord  Latency=1 Memory
+  Pressure Diff      : VX -1    VY -1    SY_with_VY -1
+  Single Issue       : false;
+SU(9) [TopReadyCycle = 0, BottomReadyCycle = 0]:   %655:vx = M_ReadTransRes 0 :: (load (<1024 x s32>) from custom "TransposePopNWS0", align 4, addrspace 5)
+  # preds left       : 2
+  # succs left       : 2
+  # rdefs left       : 0
+  Latency            : 3
+  Depth              : 35
+  Height             : 8
+  Predecessors:
+    SU(1): Ord  Latency=28 Memory
+    SU(8): Ord  Latency=1 Memory
+  Successors:
+    ExitSU: Ord  Latency=0 Artificial
+    SU(10): Ord  Latency=1 Memory
+  Pressure Diff      : VX -1    VY -1    SY_with_VY -1
+  Single Issue       : false;
+SU(10) [TopReadyCycle = 0, BottomReadyCycle = 0]:   %656:vx = M_ReadTransRes 0 :: (load (<1024 x s32>) from custom "TransposePopNWS0", align 4, addrspace 5)
+  # preds left       : 2
+  # succs left       : 2
+  # rdefs left       : 0
+  Latency            : 3
+  Depth              : 36
+  Height             : 7
+  Predecessors:
+    SU(1): Ord  Latency=28 Memory
+    SU(9): Ord  Latency=1 Memory
+  Successors:
+    ExitSU: Ord  Latency=0 Artificial
+    SU(11): Ord  Latency=1 Memory
+  Pressure Diff      : VX -1    VY -1    SY_with_VY -1
+  Single Issue       : false;
+SU(11) [TopReadyCycle = 0, BottomReadyCycle = 0]:   %657:vx = M_ReadTransRes 0 :: (load (<1024 x s32>) from custom "TransposePopNWS0", align 4, addrspace 5)
+  # preds left       : 2
+  # succs left       : 2
+  # rdefs left       : 0
+  Latency            : 3
+  Depth              : 37
+  Height             : 6
+  Predecessors:
+    SU(1): Ord  Latency=28 Memory
+    SU(10): Ord  Latency=1 Memory
+  Successors:
+    ExitSU: Ord  Latency=0 Artificial
+    SU(12): Ord  Latency=1 Memory
+  Pressure Diff      : VX -1    VY -1    SY_with_VY -1
+  Single Issue       : false;
+SU(12) [TopReadyCycle = 0, BottomReadyCycle = 0]:   %658:vx = M_ReadTransRes 0 :: (load (<1024 x s32>) from custom "TransposePopNWS0", align 4, addrspace 5)
+  # preds left       : 2
+  # succs left       : 2
+  # rdefs left       : 0
+  Latency            : 3
+  Depth              : 38
+  Height             : 5
+  Predecessors:
+    SU(1): Ord  Latency=28 Memory
+    SU(11): Ord  Latency=1 Memory
+  Successors:
+    ExitSU: Ord  Latency=0 Artificial
+    SU(13): Ord  Latency=1 Memory
+  Pressure Diff      : VX -1    VY -1    SY_with_VY -1
+  Single Issue       : false;
+SU(13) [TopReadyCycle = 0, BottomReadyCycle = 0]:   %659:vx = M_ReadTransRes 0 :: (load (<1024 x s32>) from custom "TransposePopNWS0", align 4, addrspace 5)
+  # preds left       : 2
+  # succs left       : 2
+  # rdefs left       : 0
+  Latency            : 3
+  Depth              : 39
+  Height             : 4
+  Predecessors:
+    SU(1): Ord  Latency=28 Memory
+    SU(12): Ord  Latency=1 Memory
+  Successors:
+    ExitSU: Ord  Latency=0 Artificial
+    SU(14): Ord  Latency=1 Memory
+  Pressure Diff      : VX -1    VY -1    SY_with_VY -1
+  Single Issue       : false;
+SU(14) [TopReadyCycle = 0, BottomReadyCycle = 0]:   %660:vx = M_ReadTransRes 0 :: (load (<1024 x s32>) from custom "TransposePopNWS0", align 4, addrspace 5)
+  # preds left       : 2
+  # succs left       : 2
+  # rdefs left       : 0
+  Latency            : 3
+  Depth              : 40
+  Height             : 3
+  Predecessors:
+    SU(1): Ord  Latency=28 Memory
+    SU(13): Ord  Latency=1 Memory
+  Successors:
+    ExitSU: Ord  Latency=0 Artificial
+    SU(15): Ord  Latency=1 Memory
+  Pressure Diff      : VX -1    VY -1    SY_with_VY -1
+  Single Issue       : false;
+SU(15) [TopReadyCycle = 0, BottomReadyCycle = 0]:   %661:vx = M_ReadTransRes 0 :: (load (<1024 x s32>) from custom "TransposePopNWS0", align 4, addrspace 5)
+  # preds left       : 2
+  # succs left       : 2
+  # rdefs left       : 0
+  Latency            : 3
+  Depth              : 41
+  Height             : 2
+  Predecessors:
+    SU(1): Ord  Latency=28 Memory
+    SU(14): Ord  Latency=1 Memory
+  Successors:
+    ExitSU: Ord  Latency=0 Artificial
+    SU(16): Ord  Latency=1 Memory
+  Pressure Diff      : VX -1    VY -1    SY_with_VY -1
+  Single Issue       : false;
+SU(16) [TopReadyCycle = 0, BottomReadyCycle = 0]:   %662:vx = M_ReadTransRes 0 :: (load (<1024 x s32>) from custom "TransposePopNWS0", align 4, addrspace 5)
+  # preds left       : 2
+  # succs left       : 2
+  # rdefs left       : 0
+  Latency            : 3
+  Depth              : 42
+  Height             : 1
+  Predecessors:
+    SU(1): Ord  Latency=28 Memory
+    SU(15): Ord  Latency=1 Memory
+  Successors:
+    ExitSU: Ord  Latency=0 Artificial
+    SU(17): Ord  Latency=1 Memory
+  Pressure Diff      : VX -1    VY -1    SY_with_VY -1
+  Single Issue       : false;
+SU(17) [TopReadyCycle = 0, BottomReadyCycle = 0]:   %663:vx = M_ReadTransRes 0 :: (load (<1024 x s32>) from custom "TransposePopNWS0", align 4, addrspace 5)
+  # preds left       : 2
+  # succs left       : 1
+  # rdefs left       : 0
+  Latency            : 3
+  Depth              : 43
+  Height             : 0
+  Predecessors:
+    SU(1): Ord  Latency=28 Memory
+    SU(16): Ord  Latency=1 Memory
+  Successors:
+    ExitSU: Ord  Latency=0 Artificial
+  Pressure Diff      : VX -1    VY -1    SY_with_VY -1
+  Single Issue       : false;
+SU(18) [TopReadyCycle = 0, BottomReadyCycle = 0]:   %7962:pmr = S_LS %622:sx, 128
+  # preds left       : 1
+  # succs left       : 1
+  # rdefs left       : 0
+  Latency            : 4
+  Depth              : 4
+  Height             : 4
+  Predecessors:
+    SU(0): Data Latency=4 Reg=%622
+  Successors:
+    SU(19): Data Latency=4 Reg=%7962
+  Pressure Diff      : PMR -1
+  Single Issue       : false;
+SU(19) [TopReadyCycle = 0, BottomReadyCycle = 0]:   %664:sx = S_Select_Pse %7962:pmr, %622:sx, 128
+  # preds left       : 2
+  # succs left       : 0
+  # rdefs left       : 0
+  Latency            : 1
+  Depth              : 8
+  Height             : 0
+  Predecessors:
+    SU(18): Data Latency=4 Reg=%7962
+    SU(0): Data Latency=4 Reg=%622
+  Pressure Diff      : PMR 1    SXBF -1    SY -1    SY_with_VY -1
+  Single Issue       : false;
+SU(20) [TopReadyCycle = 0, BottomReadyCycle = 0]:   %7963:pmr = S_LS %622:sx, 121
+  # preds left       : 1
+  # succs left       : 1
+  # rdefs left       : 0
+  Latency            : 4
+  Depth              : 4
+  Height             : 4
+  Predecessors:
+    SU(0): Data Latency=4 Reg=%622
+  Successors:
+    ExitSU: Data Latency=4 Reg=%7963
+  Pressure Diff      : PMR -1
+  Single Issue       : false;
+SU(21) [TopReadyCycle = 0, BottomReadyCycle = 0]:   %9043:sx = S_SHRA %9861:sx, 31
+  # preds left       : 0
+  # succs left       : 1
+  # rdefs left       : 0
+  Latency            : 4
+  Depth              : 0
+  Height             : 0
+  Successors:
+    ExitSU: Ord  Latency=0 Artificial
+  Pressure Diff      : SXBF -1    SY -1    SY_with_VY -1
+  Single Issue       : false;
+ExitSU [TopReadyCycle = 0, BottomReadyCycle = 0]:   DLC_BRCOND_Pse %bb.599, %7963:pmr
+  # preds left       : 18
+  # succs left       : 0
+  # rdefs left       : 0
+  Latency            : 0
+  Depth              : 43
+  Height             : 0
+  Predecessors:
+    SU(21): Ord  Latency=0 Artificial
+    SU(20): Data Latency=4 Reg=%7963
+    SU(17): Ord  Latency=0 Artificial
+    SU(16): Ord  Latency=0 Artificial
+    SU(15): Ord  Latency=0 Artificial
+    SU(14): Ord  Latency=0 Artificial
+    SU(13): Ord  Latency=0 Artificial
+    SU(12): Ord  Latency=0 Artificial
+    SU(11): Ord  Latency=0 Artificial
+    SU(10): Ord  Latency=0 Artificial
+    SU(9): Ord  Latency=0 Artificial
+    SU(8): Ord  Latency=0 Artificial
+    SU(7): Ord  Latency=0 Artificial
+    SU(6): Ord  Latency=0 Artificial
+    SU(5): Ord  Latency=0 Artificial
+    SU(4): Ord  Latency=0 Artificial
+    SU(3): Ord  Latency=0 Artificial
+    SU(2): Ord  Latency=0 Artificial
+Start to schedule
+Packet[0]:
+	[0] SU(17)	  %663:vx = M_ReadTransRes 0 :: (load (<1024 x s32>) from custom "TransposePopNWS0", align 4, addrspace 5)
+Packet[0]:
+	[0] SU(17)	  %663:vx = M_ReadTransRes 0 :: (load (<1024 x s32>) from custom "TransposePopNWS0", align 4, addrspace 5)
+	[1] SU(19)	  %664:sx = S_Select_Pse %7962:pmr, %622:sx, 128
+Packet[0]:
+	[0] SU(17)	  %663:vx = M_ReadTransRes 0 :: (load (<1024 x s32>) from custom "TransposePopNWS0", align 4, addrspace 5)
+	[1] SU(19)	  %664:sx = S_Select_Pse %7962:pmr, %622:sx, 128
+	[2] SU(21)	  %9043:sx = S_SHRA %9861:sx, 31
+Packet[1]:
+	[0] SU(16)	  %662:vx = M_ReadTransRes 0 :: (load (<1024 x s32>) from custom "TransposePopNWS0", align 4, addrspace 5)
+Packet[2]:
+	[0] SU(15)	  %661:vx = M_ReadTransRes 0 :: (load (<1024 x s32>) from custom "TransposePopNWS0", align 4, addrspace 5)
+Packet[3]:
+	[0] SU(14)	  %660:vx = M_ReadTransRes 0 :: (load (<1024 x s32>) from custom "TransposePopNWS0", align 4, addrspace 5)
+Packet[4]:
+	[0] SU(13)	  %659:vx = M_ReadTransRes 0 :: (load (<1024 x s32>) from custom "TransposePopNWS0", align 4, addrspace 5)
+Packet[4]:
+	[0] SU(13)	  %659:vx = M_ReadTransRes 0 :: (load (<1024 x s32>) from custom "TransposePopNWS0", align 4, addrspace 5)
+	[1] SU(20)	  %7963:pmr = S_LS %622:sx, 121
+Packet[4]:
+	[0] SU(13)	  %659:vx = M_ReadTransRes 0 :: (load (<1024 x s32>) from custom "TransposePopNWS0", align 4, addrspace 5)
+	[1] SU(20)	  %7963:pmr = S_LS %622:sx, 121
+	[2] SU(18)	  %7962:pmr = S_LS %622:sx, 128
+Packet[5]:
+	[0] SU(12)	  %658:vx = M_ReadTransRes 0 :: (load (<1024 x s32>) from custom "TransposePopNWS0", align 4, addrspace 5)
+Packet[6]:
+	[0] SU(11)	  %657:vx = M_ReadTransRes 0 :: (load (<1024 x s32>) from custom "TransposePopNWS0", align 4, addrspace 5)
+Packet[7]:
+	[0] SU(10)	  %656:vx = M_ReadTransRes 0 :: (load (<1024 x s32>) from custom "TransposePopNWS0", align 4, addrspace 5)
+Packet[8]:
+	[0] SU(9)	  %655:vx = M_ReadTransRes 0 :: (load (<1024 x s32>) from custom "TransposePopNWS0", align 4, addrspace 5)
+Packet[8]:
+	[0] SU(9)	  %655:vx = M_ReadTransRes 0 :: (load (<1024 x s32>) from custom "TransposePopNWS0", align 4, addrspace 5)
+	[1] SU(0)	  %622:sx = nsw S_SUB %31:sx, %9861:sx
+Packet[9]:
+	[0] SU(8)	  %654:vx = M_ReadTransRes 0 :: (load (<1024 x s32>) from custom "TransposePopNWS0", align 4, addrspace 5)
+Packet[10]:
+	[0] SU(7)	  %653:vx = M_ReadTransRes 0 :: (load (<1024 x s32>) from custom "TransposePopNWS0", align 4, addrspace 5)
+Packet[11]:
+	[0] SU(6)	  %652:vx = M_ReadTransRes 0 :: (load (<1024 x s32>) from custom "TransposePopNWS0", align 4, addrspace 5)
+Packet[12]:
+	[0] SU(5)	  %651:vx = M_ReadTransRes 0 :: (load (<1024 x s32>) from custom "TransposePopNWS0", align 4, addrspace 5)
+Packet[13]:
+	[0] SU(4)	  %650:vx = M_ReadTransRes 0 :: (load (<1024 x s32>) from custom "TransposePopNWS0", align 4, addrspace 5)
+Packet[14]:
+	[0] SU(3)	  %649:vx = M_ReadTransRes 0 :: (load (<1024 x s32>) from custom "TransposePopNWS0", align 4, addrspace 5)
+Packet[15]:
+	[0] SU(2)	  %648:vx = M_ReadTransRes 0 :: (load (<1024 x s32>) from custom "TransposePopNWS0", align 4, addrspace 5)
+Packet[17]:
+	[0] SU(1)	  M_TpE %9867:vx, 0 :: (store (<1024 x s32>) into custom "TransposePopNWS0", align 4, addrspace 5)
+*** Final schedule for %bb.589 ***
+ * Schedule table (BottomUp):
+  i: issue
+  x: resource booked
+Cycle              | 43 | 42 | 41 | 40 | 39 | 38 | 37 | 36 | 35 | 34 | 33 | 32 | 31 | 30 | 29 | 28 | 27 | 26 | 25 | 24 | 23 | 22 | 21 | 20 | 19 | 18 | 17 | 16 | 15 | 14 | 13 | 12 | 11 | 10 | 9  | 8  | 7  | 6  | 5  | 4  | 3  | 2  | 1  | 0  |
+SU(1)              | i  |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |
+       DLCSlot6MTI | x  |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    | 
+        DLCUnitMTI | x  | x  | x  | x  | x  | x  | x  | x  |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    | 
+SU(2)              |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    | i  |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |
+       DLCSlot7MTR |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    | x  |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    | 
+        DLCUnitMTR |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    | x  |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    | 
+SU(3)              |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    | i  |    |    |    |    |    |    |    |    |    |    |    |    |    |    |
+       DLCSlot7MTR |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    | x  |    |    |    |    |    |    |    |    |    |    |    |    |    |    | 
+        DLCUnitMTR |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    | x  |    |    |    |    |    |    |    |    |    |    |    |    |    |    | 
+SU(4)              |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    | i  |    |    |    |    |    |    |    |    |    |    |    |    |    |
+       DLCSlot7MTR |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    | x  |    |    |    |    |    |    |    |    |    |    |    |    |    | 
+        DLCUnitMTR |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    | x  |    |    |    |    |    |    |    |    |    |    |    |    |    | 
+SU(5)              |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    | i  |    |    |    |    |    |    |    |    |    |    |    |    |
+       DLCSlot7MTR |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    | x  |    |    |    |    |    |    |    |    |    |    |    |    | 
+        DLCUnitMTR |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    | x  |    |    |    |    |    |    |    |    |    |    |    |    | 
+SU(6)              |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    | i  |    |    |    |    |    |    |    |    |    |    |    |
+       DLCSlot7MTR |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    | x  |    |    |    |    |    |    |    |    |    |    |    | 
+        DLCUnitMTR |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    | x  |    |    |    |    |    |    |    |    |    |    |    | 
+SU(7)              |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    | i  |    |    |    |    |    |    |    |    |    |    |
+       DLCSlot7MTR |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    | x  |    |    |    |    |    |    |    |    |    |    | 
+        DLCUnitMTR |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    | x  |    |    |    |    |    |    |    |    |    |    | 
+SU(8)              |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    | i  |    |    |    |    |    |    |    |    |    |
+       DLCSlot7MTR |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    | x  |    |    |    |    |    |    |    |    |    | 
+        DLCUnitMTR |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    | x  |    |    |    |    |    |    |    |    |    | 
+SU(0)              |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    | i  |    |    |    |    |    |    |    |    |
+    DLCGpSScalar01 |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    | x  |    |    |    |    |    |    |    |    | 
+   DLCUnitScalar01 |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    | x  |    |    |    |    |    |    |    |    | 
+SU(9)              |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    | i  |    |    |    |    |    |    |    |    |
+       DLCSlot7MTR |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    | x  |    |    |    |    |    |    |    |    | 
+        DLCUnitMTR |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    | x  |    |    |    |    |    |    |    |    | 
+SU(10)             |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    | i  |    |    |    |    |    |    |    |
+       DLCSlot7MTR |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    | x  |    |    |    |    |    |    |    | 
+        DLCUnitMTR |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    | x  |    |    |    |    |    |    |    | 
+SU(11)             |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    | i  |    |    |    |    |    |    |
+       DLCSlot7MTR |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    | x  |    |    |    |    |    |    | 
+        DLCUnitMTR |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    | x  |    |    |    |    |    |    | 
+SU(12)             |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    | i  |    |    |    |    |    |
+       DLCSlot7MTR |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    | x  |    |    |    |    |    | 
+        DLCUnitMTR |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    | x  |    |    |    |    |    | 
+SU(18)             |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    | i  |    |    |    |    |
+    DLCGpSScalar01 |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    | x  |    |    |    |    | 
+   DLCUnitScalar01 |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    | x  |    |    |    |    | 
+SU(20)             |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    | i  |    |    |    |    |
+    DLCGpSScalar01 |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    | x  |    |    |    |    | 
+   DLCUnitScalar01 |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    | x  |    |    |    |    | 
+SU(13)             |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    | i  |    |    |    |    |
+       DLCSlot7MTR |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    | x  |    |    |    |    | 
+        DLCUnitMTR |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    | x  |    |    |    |    | 
+SU(14)             |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    | i  |    |    |    |
+       DLCSlot7MTR |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    | x  |    |    |    | 
+        DLCUnitMTR |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    | x  |    |    |    | 
+SU(15)             |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    | i  |    |    |
+       DLCSlot7MTR |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    | x  |    |    | 
+        DLCUnitMTR |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    | x  |    |    | 
+SU(16)             |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    | i  |    |
+       DLCSlot7MTR |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    | x  |    | 
+        DLCUnitMTR |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    | x  |    | 
+SU(21)             |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    | i  |
+    DLCGpSScalar01 |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    | x  | 
+   DLCSlot1Scalar1 |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    | x  | 
+    DLCUnitScalar1 |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    | x  | 
+   DLCUnitScalar01 |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    | x  | 
+SU(19)             |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    | i  |
+SU(17)             |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    | i  |
+       DLCSlot7MTR |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    | x  | 
+        DLCUnitMTR |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    | x  | 
+SU(1) [TopReadyCycle = 0, BottomReadyCycle = 43]:   M_TpE %9867:vx, 0 :: (store (<1024 x s32>) into custom "TransposePopNWS0", align 4, addrspace 5)
+SU(2) [TopReadyCycle = 0, BottomReadyCycle = 15]:   %648:vx = M_ReadTransRes 0 :: (load (<1024 x s32>) from custom "TransposePopNWS0", align 4, addrspace 5)
+SU(3) [TopReadyCycle = 0, BottomReadyCycle = 14]:   %649:vx = M_ReadTransRes 0 :: (load (<1024 x s32>) from custom "TransposePopNWS0", align 4, addrspace 5)
+SU(4) [TopReadyCycle = 0, BottomReadyCycle = 13]:   %650:vx = M_ReadTransRes 0 :: (load (<1024 x s32>) from custom "TransposePopNWS0", align 4, addrspace 5)
+SU(5) [TopReadyCycle = 0, BottomReadyCycle = 12]:   %651:vx = M_ReadTransRes 0 :: (load (<1024 x s32>) from custom "TransposePopNWS0", align 4, addrspace 5)
+SU(6) [TopReadyCycle = 0, BottomReadyCycle = 11]:   %652:vx = M_ReadTransRes 0 :: (load (<1024 x s32>) from custom "TransposePopNWS0", align 4, addrspace 5)
+SU(7) [TopReadyCycle = 0, BottomReadyCycle = 10]:   %653:vx = M_ReadTransRes 0 :: (load (<1024 x s32>) from custom "TransposePopNWS0", align 4, addrspace 5)
+SU(8) [TopReadyCycle = 0, BottomReadyCycle = 9]:   %654:vx = M_ReadTransRes 0 :: (load (<1024 x s32>) from custom "TransposePopNWS0", align 4, addrspace 5)
+SU(0) [TopReadyCycle = 0, BottomReadyCycle = 8]:   %622:sx = nsw S_SUB %31:sx, %9861:sx
+SU(9) [TopReadyCycle = 0, BottomReadyCycle = 8]:   %655:vx = M_ReadTransRes 0 :: (load (<1024 x s32>) from custom "TransposePopNWS0", align 4, addrspace 5)
+SU(10) [TopReadyCycle = 0, BottomReadyCycle = 7]:   %656:vx = M_ReadTransRes 0 :: (load (<1024 x s32>) from custom "TransposePopNWS0", align 4, addrspace 5)
+SU(11) [TopReadyCycle = 0, BottomReadyCycle = 6]:   %657:vx = M_ReadTransRes 0 :: (load (<1024 x s32>) from custom "TransposePopNWS0", align 4, addrspace 5)
+SU(12) [TopReadyCycle = 0, BottomReadyCycle = 5]:   %658:vx = M_ReadTransRes 0 :: (load (<1024 x s32>) from custom "TransposePopNWS0", align 4, addrspace 5)
+SU(18) [TopReadyCycle = 0, BottomReadyCycle = 4]:   %7962:pmr = S_LS %622:sx, 128
+SU(20) [TopReadyCycle = 0, BottomReadyCycle = 4]:   %7963:pmr = S_LS %622:sx, 121
+SU(13) [TopReadyCycle = 0, BottomReadyCycle = 4]:   %659:vx = M_ReadTransRes 0 :: (load (<1024 x s32>) from custom "TransposePopNWS0", align 4, addrspace 5)
+SU(14) [TopReadyCycle = 0, BottomReadyCycle = 3]:   %660:vx = M_ReadTransRes 0 :: (load (<1024 x s32>) from custom "TransposePopNWS0", align 4, addrspace 5)
+SU(15) [TopReadyCycle = 0, BottomReadyCycle = 2]:   %661:vx = M_ReadTransRes 0 :: (load (<1024 x s32>) from custom "TransposePopNWS0", align 4, addrspace 5)
+SU(16) [TopReadyCycle = 0, BottomReadyCycle = 1]:   %662:vx = M_ReadTransRes 0 :: (load (<1024 x s32>) from custom "TransposePopNWS0", align 4, addrspace 5)
+SU(21) [TopReadyCycle = 0, BottomReadyCycle = 0]:   %9043:sx = S_SHRA %9861:sx, 31
+SU(19) [TopReadyCycle = 0, BottomReadyCycle = 0]:   %664:sx = S_Select_Pse %7962:pmr, %622:sx, 128
+SU(17) [TopReadyCycle = 0, BottomReadyCycle = 0]:   %663:vx = M_ReadTransRes 0 :: (load (<1024 x s32>) from custom "TransposePopNWS0", align 4, addrspace 5)
